@@ -17,7 +17,7 @@ public class Experiment {
     public void runMultipleTests() {
         System.out.println(" SMALL GRAPH (10 Vertices) ");
         Graph smallGraph = createGraph(10);
-        smallGraph.printPath = true; // Print path for small graph
+        smallGraph.printPath = true;
         System.out.println("Graph Structure:");
         smallGraph.printGraph();
         System.out.println();
