@@ -3,19 +3,16 @@ import java.util.*;
 public class Graph {
     private Map<Integer, Vertex> vertices;
     private Map<Integer, List<Edge>> adjList;
-    public boolean printPath = true; // Flag to toggle printing during traversal
-
+    public boolean printPath = true;
     public Graph() {
         this.vertices = new HashMap<>();
         this.adjList = new HashMap<>();
     }
-
     public void addVertex(Vertex v) {
         vertices.put(v.getId(), v);
         adjList.putIfAbsent(v.getId(), new ArrayList<>());
     }
 
-    // Adding an undirected edge (adds both directions)
     public void addEdge(int from, int to) {
         if (!vertices.containsKey(from) || !vertices.containsKey(to)) {
             return;
@@ -34,7 +31,6 @@ public class Graph {
         }
     }
 
-    // Breadth-First Search
     public void bfs(int start) {
         if (!vertices.containsKey(start)) return;
 
@@ -60,7 +56,6 @@ public class Graph {
         if (printPath) System.out.println();
     }
 
-    // Depth-First Search
     public void dfs(int start) {
         if (!vertices.containsKey(start)) return;
         Set<Integer> visited = new HashSet<>();
@@ -70,7 +65,6 @@ public class Graph {
         if (printPath) System.out.println();
     }
 
-    // Helper method for DFS recursion
     private void dfsHelper(int current, Set<Integer> visited) {
         visited.add(current);
         if (printPath) System.out.print(current + " ");

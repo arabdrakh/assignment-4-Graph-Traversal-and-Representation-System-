@@ -1,6 +1,6 @@
 //Aruzhan Abdrakhmanova IT-2501
 public class Vertex {
-    private int id; // unique identifier
+    private int id;
 
     public Vertex(int id) {
         this.id = id;

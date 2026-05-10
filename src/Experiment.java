@@ -1,6 +1,5 @@
 //Aruzhan Abdrakhmanova IT-2501
 public class Experiment {
-
     public void runTraversals(Graph g) {
         long startBfs = System.nanoTime();
         g.bfs(0);
@@ -26,7 +25,7 @@ public class Experiment {
 
         System.out.println("\n MEDIUM GRAPH (30 Vertices) ");
         Graph mediumGraph = createGraph(30);
-        mediumGraph.printPath = false; // Turn off printing for accurate time measure
+        mediumGraph.printPath = false;
         runTraversals(mediumGraph);
 
         System.out.println("\n LARGE GRAPH (100 Vertices) ");

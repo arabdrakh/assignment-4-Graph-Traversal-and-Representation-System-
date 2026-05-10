@@ -7,7 +7,6 @@ public class Edge {
         this.source = source;
         this.destination = destination;
     }
-
     public int getSource() {
         return source;
     }
@@ -15,7 +14,6 @@ public class Edge {
     public int getDestination() {
         return destination;
     }
-
     @Override
     public String toString() {
         return "Edge{" + source + " -> " + destination + "}";
